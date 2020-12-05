@@ -43,7 +43,7 @@ const cssLoaders = extra => {
 
 module.exports = {
   mode: 'development',
-  entry: ['@babel/polyfill','./src/drop.js'],
+  entry: ['@babel/polyfill','./src/trello.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js'
