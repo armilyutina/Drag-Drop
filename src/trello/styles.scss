@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.board__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.board {
+  min-height: 400px;
+  min-width: 300px;
+  border: 5px solid red;
+  border-radius: 15px 15px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px dotted pink;
+  cursor: grab;
+  border-radius: 6px;
+}

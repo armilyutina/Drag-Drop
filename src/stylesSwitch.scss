@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 90vh;
+}
+
+
+input {
+  margin: 20px;
+}
+
+.fade-enter-active {
+  animation: fade-in 500ms;
+}
+
+
+.fade-exit-active {
+  animation: fade-out 0.5s;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transition: translateX(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transition: translateX(0px);
+  }
+}
+
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transition: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transition: translateX(150px);
+  }
+}

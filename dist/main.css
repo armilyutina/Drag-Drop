@@ -1,4 +1,114 @@
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  margin: 10%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px dotted black;
+}
+
+.circle.entering {
+  animation: show-loader 0.4s forwards;
+}
+
+.circle.entered {
+  animation: rotate-loader 0.5s infinite;
+}
+
+.circle.exiting {
+  animation: show-loader 0.4s reverse;
+}
+
+@keyframes show-loader {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes rotate-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  margin: 10%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px dotted black;
+}
+
+.circle-show {
+  animation: show-loader 0.4s forwards;
+}
+
+.circle-rotate {
+  animation: rotate-loader 0.5s infinite;
+}
+
+.circle-hide {
+  animation: show-loader 0.4s reverse;
+}
+
+@keyframes show-loader {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotate-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,33 +116,42 @@
 
 .app {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-
-.board__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.board {
-  min-height: 400px;
-  min-width: 300px;
-  border: 5px solid red;
-  border-radius: 15px 15px;
-  padding: 20px 10px;
-  display: flex;
-  align-items: center;
   flex-direction: column;
+  width: 50vw;
+  height: 90vh;
 }
 
-.item {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px dotted pink;
-  cursor: grab;
-  border-radius: 6px;
+input {
+  margin: 20px;
+}
+
+.fade-enter-active {
+  animation: fade-in 500ms;
+}
+
+.fade-exit-active {
+  animation: fade-out 0.5s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transition: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transition: translateX(0px);
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transition: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transition: translateX(150px);
+  }
 }
