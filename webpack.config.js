@@ -43,7 +43,7 @@ const cssLoaders = extra => {
 
 module.exports = {
   mode: 'development',
-  entry: ['@babel/polyfill','./src/sundbox.js', './src/sundboxCSS.js', './src/sundboxSwitch.js'],
+  entry: ['@babel/polyfill','./src/sundbox.js', './src/sundboxCSS.js', './src/sundboxSwitch.js', './src/sundboxRTG.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js'
